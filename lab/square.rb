@@ -1,22 +1,26 @@
-class firstBox
+class Square
 
-  attr_accessor :side_length
+  attr_accessor :side_length, :side_width
 
-  def initialize(l)
+  def initialize(l,w)
     @side_length = l
+    @side_width = w
   end
 
   def calculate_area
-    p @side_length ** 2
+    @side_length ** 2
   end
 
   def calculate_perimeter
-    p @side_length * 4
+    @side_length * 4
+  end
+
+  def calculate_area_of_rectangle
+    @side_length * @side_width
+  end
+
+  def calculate_perimeter_of_rectangle
+    2 * (@side_width + @side_length)
   end
 
 end
-
-initial = firstBox.new(5)
-p initial.side_length 5
-
-puts initial
